@@ -1,8 +1,15 @@
 # @responsekit/nestjs
 Helpers for integrating responsekit into nestjs.
 
-## Prerequisites
-In order to extend `CommandResultService`, `@nestjs/cqrs` must be installed.
+## Installation
+After creating your Nest.JS application, install `@responsekit/core` and `@responsekit/nestjs`:
+
+```
+npm i @responsekit/core @responsekit/nestjs
+```
+
+## Other Prerequisites
+In order to extend `CommandResultService`, `@nestjs/cqrs` must also be installed.
 
 ## RejectionFilter
 The `RejectionFilter` intercepts `Error`s, `HttpException`s, and `Rejection`s thrown by the application and transforms them into a `GenericResponse` with the appropriate status if defined by a caught `Rejection`.

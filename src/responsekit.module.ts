@@ -1,8 +1,8 @@
-import { DynamicModule, Global, Module } from "@nestjs/common";
+import { DynamicModule, Global, Module, Provider } from "@nestjs/common";
 import { CommandBus, CqrsModule, EventBus, QueryBus } from "@nestjs/cqrs";
 import { CommandResultService } from "./services/command-result.service";
 
-const commandResultServiceFactory = () => ({
+const commandResultServiceFactory = (): Provider => ({
     provide: CommandResultService,
     useFactory: (
         commandBus: CommandBus,
